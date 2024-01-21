@@ -9,7 +9,6 @@ export async function load({ params }) {
     .single();
 
   if (data) {
-    console.log(data);
     return { report: data };
   }
 

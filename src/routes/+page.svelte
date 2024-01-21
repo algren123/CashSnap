@@ -101,11 +101,17 @@
     }
 </script>
 
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>CashSnap</title>
+    <meta name="description" content="Effortlessly log income and expenses, and let CashSnap transform it into a sleek, easy-to-read report">
+</head>
 <div class="bg-black h-full text-white">
-    <h1 class="h1 font-bold text-center p-10">CashSnap</h1>
+    <h1 class="h1 font-bold text-center p-10 flex justify-center items-center lg:items-start gap-3"><img src="/favicon.png" alt="CashSnap Logo" class="w-8 h-8 lg:w-14 lg:h-14" />CashSnap</h1>
     <h2 class="h2 font-bold text-slate-300 text-center lg:px-60 pb-12"> Effortlessly log income and expenses, and let CashSnap transform it into a sleek, easy-to-read report</h2>
     <form on:submit|preventDefault={handleSubmit} class="text-center">
-        <div class="flex flex-wrap px-20 lg:px-80 gap-4 justify-center">
+        <div class="flex flex-wrap px-10 lg:px-80 gap-4 justify-center">
             <CardSection title="Monthly Income" bg="variant-ghost">
                 <label>Salary
                     <input required class="input text-black px-2" name="salary" type="number" on:change={(e) => salary = Number(e.currentTarget.value)} />
@@ -114,7 +120,7 @@
                     <input class="input text-black px-2" name="other" type="number" on:change={(e) => otherIncome = Number(e.currentTarget.value)}/>
                 </label>
             </CardSection>
-            <CardSection title="Housing" bg="variant-ghost-tertiary">
+            <CardSection title="Housing" bg="variant-ghost-tertiary" styles="w-full md:w-auto">
                 <RadioGroup class="text-black font-bold" rounded="rounded-container-token" color="text-white" flexDirection="flex-col">
                     <RadioItem bind:group={housingType} name="rent" value="renting">Renting</RadioItem>
                     <RadioItem bind:group={housingType} name="mortgage" value="mortgage">Mortgage</RadioItem>

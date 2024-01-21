@@ -2,19 +2,33 @@
   import CardSection from "$lib/components/CardSection.svelte";
   import DataChart from "$lib/components/DataChart.svelte";
 
+  let title = "Monthly Financial Report | CashSnap"
+  let description = "CashSnap's Monthly Financial Report provides a comprehensive view of your income, housing, utilities, and more. Manage your finances effectively with CashSnap."
+
   export let data;
 
   export const { salary, otherIncome, housingType, housingCost, gas, electricity, water, internet, groceries,
     takeaways, carPayment, carInsurance, carFuel, publicTransport, phone, insurance, subscriptions, otherBills,
     creditCard, loans, entertainment, savings, investments, misc, notes, currency } = data.report;
 </script>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>{title}</title>
+    <meta name="description" content={description}>
+</head>
 <div class="bg-black text-white min-h-screen h-full text-center">
     <div class="pt-6">
-        <a class="h1 font-bold text-center" href="/">CashSnap</a>
+        <div class="w-full">
+            <a class="h1 w-auto font-bold text-center flex justify-center items-center lg:items-start gap-3" href="/"><img src="/favicon.png" alt="CashSnap Logo" class="w-8 h-8 lg:w-14 lg:h-14" />CashSnap</a>
+        </div>
         <h2 class="h2 font-bold text-center mt-2">Monthly Financial Report</h2>
     </div>
-    <div class="flex px-20 py-10 lg:px-80 gap-4 justify-center">
-        <CardSection bg="variant-ghost" styles="px-10" sectionStyles="flex-wrap justify-center gap-10">
+    <div class="flex flex-col md:flex-row py-10 lg:px-80 gap-4 justify-center">
+        <CardSection bg="variant-ghost" styles="px-2 mx-3" sectionStyles="flex-wrap justify-center gap-10">
             <div class="bg-green-600 p-5 rounded-lg">
                 <h3 class="h3 font-bold">Income - {currency}{salary + otherIncome}</h3>
                 <h5 class="h5 font-bold">Salary - {currency}{salary}</h5>

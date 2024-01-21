@@ -4,6 +4,7 @@
     import FusionCharts from 'fusioncharts';
     import Charts from 'fusioncharts/fusioncharts.charts';
     import FusionTheme from 'fusioncharts/themes/fusioncharts.theme.fusion';
+  import { isMobile } from '$lib/helpers';
 
     fcRoot(FusionCharts, Charts, FusionTheme);
 
@@ -40,8 +41,8 @@
 
     const totalChartConfig = {
         type: 'doughnut2d',
-        width: '500',
-        height: '300',
+        width: isMobile(navigator) ? '350' : '500',
+        height: isMobile(navigator) ? '300' : '300',
         renderAt: 'chart-container',
         dataSource: totalDataSource
     };
@@ -93,14 +94,14 @@
     
     const outgoingChartConfig = {
         type: 'doughnut2d',
-        width: '500',
-        height: '300',
+        width: isMobile(navigator) ? '350' : '500',
+        height: isMobile(navigator) ? '300' : '300',
         renderAt: 'chart-container',
         dataSource: outgoingDataSource
     }
 </script>
 
-<div id="chart-container" class="flex place-content-evenly w-full mt-10">
+<div id="chart-container" class="flex flex-col md:flex-row place-content-evenly w-full mt-10">
     <SvelteFC {...totalChartConfig} />
     <SvelteFC {...outgoingChartConfig} />
 </div>
