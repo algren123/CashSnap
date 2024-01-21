@@ -1,42 +1,47 @@
-# create-svelte
+<h1 align="center">Welcome to CashSnap 👋</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-0.0.1-blue.svg?cacheSeconds=2592000" />
+  <a href="#" target="_blank">
+    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
+  </a>
+  <a href="https://twitter.com/Algren_M" target="_blank">
+    <img alt="Twitter: Algren_M" src="https://img.shields.io/twitter/follow/Algren_M.svg?style=social" />
+  </a>
+</p>
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+> CashSnap: Streamlining financial management. Easily log income and expenses for instant, clear, and readable reports. Simplify budgeting and conquer your financial goals effortlessly.
 
-## Creating a project
+### 🏠 [Homepage](https://cashsnap.vercel.app/)
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Install
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
+```sh
+npm install
 ```
 
-## Developing
+## Usage
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
+```sh
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
+## Author
 
-To create a production version of your app:
+👤 **Algren Pauna**
 
-```bash
-npm run build
-```
+- Website: https://www.algrenpauna.com/
+- Twitter: [@Algren_M](https://twitter.com/Algren_M)
+- Github: [@algren123](https://github.com/algren123)
+- LinkedIn: [@algren-pauna](https://linkedin.com/in/algren-pauna)
 
-You can preview the production build with `npm run preview`.
+## 🤝 Contributing
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/algren123/CashSnap/issues).
 
-# CashSnap
+## Show your support
 
-CashSnap: Streamlining financial management. Easily log income and expenses for instant, clear, and readable reports. Simplify budgeting and conquer your financial goals effortlessly.
+Give a ⭐️ if this project helped you!
+
+---
+
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
